@@ -10,10 +10,17 @@ const File = () => {
 
     if(type === "pdf"){
         return (<>
-            <iframe className="file"
+            {/* <iframe className="file"
                 title={name}
                 src={file_path} 
                 frameBorder="0"
+                width="100%"
+                height="100%"
+            /> */}
+
+            <object className="file"
+                data={file_path} 
+                type="application/pdf"
                 width="100%"
                 height="100%"
             />

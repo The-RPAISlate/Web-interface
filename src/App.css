@@ -24,6 +24,7 @@ body {
 #root{
   display: flex;
   flex-direction: column;
+  align-content: space-between;
   min-height: 100vh;
 }
 
@@ -35,4 +36,30 @@ a{
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* Medium screens */
+@media only screen and (min-width:768.01px) and (max-width: 996px){
+
+  body{
+    background-size: 130%;
+  }
+}
+
+/* Small screens */
+@media only screen and (max-width:768px){
+
+  body{
+    background-size: 130%;
+  }
+}
+
+/* Very small screens */
+@media only screen and (max-width:650px){
+
+  body{
+    background-size: 200%;
+    overflow-x: hidden;
+  }
 }

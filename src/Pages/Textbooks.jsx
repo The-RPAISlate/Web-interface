@@ -24,7 +24,7 @@ const Textbooks = (props) => {
                     book => {
                         return <Card 
                                     name={book.title}
-                                    url="textbook"
+                                    url="textbooks"
                                     type="file"
                                     file_type="pdf"
                                     file_path={book.path}

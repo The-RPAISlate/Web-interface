@@ -121,7 +121,7 @@
 /* CARD */
 
 .card{
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     margin: 10px 20px;
     height: 90%;
     border-radius: 25px;
@@ -174,4 +174,20 @@ footer{
     background-color: black;
     color: white;
     text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+/* Small screens */
+@media only screen and (max-width: 680px){
+    .navbar, .class-info{
+        padding: 10px 20px;
+    }
+    .class-info{
+        flex-direction: column;
+    }
+    .navlinks{
+        display: none;
+    }
 }

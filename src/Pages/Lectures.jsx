@@ -24,7 +24,7 @@ const Lectures = (props) => {
                     lecture => {
                         return <Card 
                                     name={lecture.title}
-                                    url="lecture"
+                                    url="lectures"
                                     type="file"
                                     file_type="media"
                                     file_path={lecture.path}

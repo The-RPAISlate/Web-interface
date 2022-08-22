@@ -60,7 +60,7 @@ const Navbar = (props) => {
         </div>
 
         <Link to="/contact">
-        <div className="logo">
+        <div className="logo school-logo">
             <img src={props.logo_path} alt={props.school_name} />
         </div>
         </Link>
