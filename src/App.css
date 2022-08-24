@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html{
+  background-color: #fffaf2;
+}
+
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -36,6 +40,36 @@ a{
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* Scrollbar styling */
+::-webkit-scrollbar{
+  width: 10px;
+  border-radius: 100vw;
+  margin-block: 50px;
+  position: absolute;
+  right: 0;
+}
+
+::-webkit-scrollbar-track{
+  background-color: rgba(150,150,150,0.5);
+  border-radius: 100vw;
+  margin-block: 20px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #ffe8c2;
+  border-radius: 100vw;
+  border: 1px solid orange;
+  margin-block: 5px;
+}
+
+@supports (scrollbar-color: red blue){
+  * {
+    scrollbar-color: #ffe8c2 rgba(150,150,150,0.5);
+    scrollbar-width: thin;
+  }
 }
 
 

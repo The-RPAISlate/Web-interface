@@ -1,6 +1,7 @@
 // Packages
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+
 
 // Assets
 import AppLogo from "../Assets/app_logo.png";
@@ -11,6 +12,22 @@ import "./components.css";
 const Navbar = (props) => {
 
     const [dropdownStatus, setDropdownStatus] = useState(false);
+
+    const dropdownRef = useRef();
+    useEffect(() => {
+        const toggleDropdown = (e) => {
+            if(!dropdownRef.current.contains(e.target)){
+                setDropdownStatus(false);
+            }
+        }
+
+        document.addEventListener("mousedown", toggleDropdown);
+
+        return ()=>{
+            document.removeEventListener("mousedown", toggleDropdown);
+        }
+    });
+
 
     return (<div className="navbar">
         
@@ -37,7 +54,9 @@ const Navbar = (props) => {
                     />
                 </div>
 
-                <div className={dropdownStatus? "dropdown-menu": "menu-inactive"}>
+                <div className={dropdownStatus? "dropdown-menu": "menu-inactive"}
+                ref={dropdownRef}
+                >
                     {props.subjects && 
 
                         props.subjects.map(
